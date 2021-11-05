@@ -1,1 +1,124 @@
+练习1：写一个程序，打印从1到100的值：
+public class dayin {
+    public static void main(String[] args)
+    {
+        int i;
+        for(i=1;i<=100;i++)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+练习2：写一个程序，产生25个int类型的随机数。对于每一个随机值，使用if-else语句来将其分类为大于、小于或者等于紧随它而随机产生的值：
+import static net.mindview.util.Print.*;
+import java.util.*;
+
+public class CompareIntsForever {
+	public static void main(String[] args) {
+		Random rand1 = new Random();
+		Random rand2 = new Random();
+		for(int i = 0; i < 25; i++) {
+			int x = rand1.nextInt();
+			int y = rand2.nextInt();
+			if(x < y) print(x + " < " + y);
+			else if(x > y) print(x + " > " + y);
+			else print(x + " = " + y);
+		}
+		Random rand3 = new Random();
+		Random rand4 = new Random();
+		while(true) {
+		//for(int i = 0; i < 25; i++) {
+			int x = rand3.nextInt(10);
+			int y = rand4.nextInt(10);
+			if(x < y) print(x + " < " + y);
+			else if(x > y) print(x + " > " + y);
+			else print(x + " = " + y);
+		}
+	}
+}
+
+练习3：修改练习2，把代码用一个while无限循环包括起来。然后运行它直至用键盘中断其运行（通常是通过按Ctrl+C）：
+import java.util.Random;
+public class lianxi3 {
+    public static void main(String[] args)
+    {
+        Random rand1=new Random();
+        Random rand2=new Random();
+        while(true)
+        {
+            int x=rand1.nextInt();
+            int y=rand2.nextInt();
+            if(x<y)
+            {
+                System.out.println(x+"<"+y);
+            }
+            else if(x>y)
+            {
+                System.out.println(x+">"+y);
+            }
+            else
+            {
+                System.out.println(x+"="+y);
+            }
+        }
+    }
+}
+
+练习4：写一个程序，使用两个嵌套的for循环和取余操作符（%）来探测和打印素数（只能被其本身和1整除，而不能被其他数字整除的整数）：
+#这里计算的是1-100之内的素数
+public class PrimeNumberTest{
+    static void primeNumber(int num)
+    {
+        int a=0;
+        for(int i=1;i<=num;i++)
+        {
+            for(int j=1;j<i;j++)
+            {
+                if((i%j==0)&&(j!=1))
+                {
+                    a=0;
+                    break;
+                }
+                else
+                {
+                    a=i;
+                }
+            }
+            if(a!=0)
+            {
+                System.out.println(a+",");
+            }
+        }
+    }
+    public static void main(String[] args)
+    {
+        primeNumber(100);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
